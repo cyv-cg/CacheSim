@@ -22,8 +22,8 @@ class FullyAssociativeCache():
 
 	def add(self, value):
 		# if the cache is not full, place value into the first available slot
-		if self.numElements < self.SIZE - 1:
-			self.cache[self.numElements + 1] = value
+		if self.numElements < self.SIZE:
+			self.cache[self.numElements] = value
 			self.numElements += 1
 		# if the cache is full
 		else:
